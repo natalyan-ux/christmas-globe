@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Manrope:wght@400;500;600&display=swap');
+*{box-sizing:border-box}body{margin:0;background:#241b16;color:#fff1d9;font-family:Manrope,sans-serif}main{position:relative;min-height:780px;height:100svh;overflow:hidden}.experience{position:absolute;inset:0;touch-action:none}#scene{width:100%;height:100%;touch-action:none}canvas{display:block;width:100%;height:100%}.vignette{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,#170f0bbd 0%,#170f0b40 28%,transparent 48%,#1c120d20 67%,#1c120dd9 100%),radial-gradient(ellipse at 50% 48%,transparent 28%,#100b0944 100%)}.intro{position:relative;text-align:center;padding-top:5vh;pointer-events:none}h1{font:500 clamp(48px,5.6vw,82px)/.99 'Cormorant Garamond',Georgia,serif;letter-spacing:-1.8px;margin:0 0 22px;text-shadow:0 2px 24px #140b0970}h1 em{font-weight:400;color:#edc98d}.intro p{font-size:14px;color:#ead6bd;line-height:1.8;margin:0}.sound{position:absolute;right:35px;top:30px;background:#2b211e66;backdrop-filter:blur(12px);border:1px solid #d2b08045;color:#ecd7b7;border-radius:30px;display:flex;align-items:center;gap:10px;padding:12px 17px;cursor:pointer;font:500 12px Manrope,sans-serif;z-index:3}.sound-icon{font-size:19px}.sound:hover{background:#4d3c2b99}.wish{position:absolute;bottom:4.5vh;text-align:center;left:0;right:0;pointer-events:none}#wishText{font:400 clamp(27px,2.8vw,39px)/1.16 'Cormorant Garamond',Georgia,serif;margin:0 auto 22px;min-height:78px;text-shadow:0 2px 16px #160c09;transition:opacity .35s,transform .35s}#wishText.changing{opacity:0;transform:translateY(6px)}button:focus-visible{outline:2px solid #fff1d9;outline-offset:5px}@media(max-width:800px){main{min-height:750px}.intro{padding-top:90px}h1{font-size:54px}.intro p{font-size:13px}.sound{top:20px;right:20px;padding:9px 13px}.wish{bottom:30px}#wishText{font-size:30px}}@media(max-width:480px){h1{font-size:46px;letter-spacing:-1px}.intro p{font-size:12px}.sound{font-size:11px}#wishText{font-size:28px}}
+.sound{width:48px;height:48px;padding:0!important;justify-content:center;border-radius:50%;gap:0}.sound[aria-pressed="true"]{background:#b7955050;border-color:#e4be83;color:#ffe0a9}.sound[aria-pressed="true"] .mute-line{display:none}.sound svg{flex-shrink:0}.wish{bottom:3vh}#wishText{width:max-content;max-width:90vw;min-width:410px;min-height:100px;padding:20px 42px;margin-bottom:17px;color:#50351f;text-shadow:0 1px #fff5cf;font-size:clamp(26px,2.6vw,36px);background:radial-gradient(ellipse at 8% 50%,#a86f3b44,transparent 30%),radial-gradient(ellipse at 93% 55%,#a86f3b44,transparent 32%),repeating-linear-gradient(3deg,#ffffff04 0px,#ad85470a 2px,transparent 4px),linear-gradient(90deg,#b88750,#e6c78c 4%,#f1daa4 13%,#ecd09b 50%,#f2daaa 87%,#dbb77d 96%,#a8733c);box-shadow:0 7px 22px #140a0866,inset 0 0 18px #95612b44;border-top:1px solid #f8e3b044;border-bottom:1px solid #8e60394d;border-radius:55% 3% 46% 2% / 3% 45% 4% 55%;position:relative}#wishText:before,#wishText:after{content:'';position:absolute;top:-3px;bottom:-3px;width:13px;border-radius:45%;background:linear-gradient(90deg,#9d693b,#edcf95 45%,#c09257 80%,#8c572f);box-shadow:2px 1px 4px #5b361955}#wishText:before{left:-4px}#wishText:after{right:-4px;transform:scaleX(-1)}.shake-hint{position:absolute;z-index:2;pointer-events:none;display:flex;align-items:center;gap:14px;transform:translate(-20%,-40%);color:#fff0ce;text-shadow:0 2px 8px #1b110c;font-size:13px;line-height:1.5;background:#281e18b3;border:1px solid #edcb8d55;border-radius:15px;padding:14px 20px;backdrop-filter:blur(8px);box-shadow:0 6px 30px #140a0844}.shake-hint[hidden]{display:none}.gesture{display:flex;flex-direction:column;align-items:center;animation:gesture-shake 1.7s ease-in-out infinite}.gesture-arrow{font-size:28px;line-height:20px}@keyframes gesture-shake{0%,100%{transform:translateX(0) rotate(0)}25%{transform:translateX(-9px) rotate(-12deg)}50%{transform:translateX(9px) rotate(12deg)}75%{transform:translateX(-6px) rotate(-8deg)}}@media(max-width:680px){#wishText{min-width:0;width:85vw;padding:18px 20px;font-size:27px}.shake-hint{transform:translate(-50%,-50%);font-size:12px;padding:10px 14px}}@media(prefers-reduced-motion:reduce){.gesture{animation:none}}
+
+.wish{bottom:8px}#wishText{font-style:italic;margin-bottom:0}
+/* Reserve space below the interior so the parchment never covers the scene. */
+main{--scene-height:max(780px,100svh);height:calc(var(--scene-height) + 160px);min-height:0}.experience,.vignette{bottom:160px}.wish{top:var(--scene-height);bottom:auto;padding:16px 0}#wishText{font-style:italic;margin-bottom:0}
+@media(max-width:800px){main{--scene-height:max(750px,100svh)}}
+
+.wish{top:calc(var(--scene-height) - 32px)}
+
+.intro{padding-left:3vw;padding-right:3vw}h1{white-space:nowrap;font-size:clamp(20px,5.5vw,82px)}.intro p{white-space:nowrap;font-size:clamp(11px,1.65vw,24px)}
+
+.intro h1,.intro p{white-space:nowrap!important;word-break:keep-all;overflow-wrap:normal}.intro h1 em{display:inline}.intro br{display:none}
+
+#wishText{color:#281609;text-shadow:none}
+@media(min-width:1920px){.intro h1{font-size:80px}.intro p{font-size:16px}}
+
+#wishCopy{display:block;transition:opacity .35s,transform .35s}#wishCopy.changing{opacity:0;transform:translateY(5px)}#wishActions[hidden]{display:none}#wishActions{margin-top:15px;padding-top:12px;border-top:1px solid #6b421f35}.new-year{margin:0 0 11px;font:italic 24px/1.2 'Cormorant Garamond',Georgia,serif;color:#39200e}#saveWish{pointer-events:auto;cursor:pointer;border:1px solid #6e482a;background:#563820;color:#fff0cf;border-radius:4px;padding:11px 19px;font:500 12px Manrope,sans-serif}#saveWish span{margin-left:12px}#saveWish:hover{background:#3b2516}#saveWish:disabled{opacity:.65;cursor:wait}main.has-wish{height:calc(var(--scene-height) + 280px)}main.has-wish .experience,main.has-wish .vignette{bottom:280px}
+
+#saveWish{background:transparent;border:0;color:#39200e;box-shadow:none;padding:8px 12px;text-decoration:underline;text-underline-offset:4px}#saveWish:hover{background:transparent;color:#6a3d1c}
+
+#saveWish{background:transparent;border:1px solid #6e482a;border-radius:8px;padding:11px 20px;text-decoration:none;color:#39200e}#saveWish:hover{background:#6e482a12;color:#281609}
+
+#wishText{display:flex;align-items:center;justify-content:center;text-align:center}#wishCopy{width:100%;text-align:center}
+
+.restart{right:94px}.restart:hover svg{transform:rotate(-30deg)}.restart svg{transition:transform .2s}@media(max-width:800px){.restart{right:78px}}@media(prefers-reduced-motion:reduce){.restart svg{transition:none}}
+
+/* Fit the complete experience, including the parchment, in the viewport. */
+main,main.has-wish{--wish-space:clamp(112px,15svh,150px);--scene-height:calc(100svh - var(--wish-space));height:100svh;min-height:0}
+.experience,.vignette,main.has-wish .experience,main.has-wish .vignette{bottom:var(--wish-space)}
+.wish{top:auto;bottom:clamp(14px,2svh,24px);padding:0 20px}
+#wishText{width:min(720px,86vw);max-width:100%;min-width:0;min-height:82px;padding:14px 32px;font-size:clamp(24px,2vw,32px);line-height:1.15}
+.intro{padding-top:clamp(20px,3.5svh,38px)}
+.intro h1{font-size:clamp(32px,min(4.8vw,7svh),76px);margin-bottom:clamp(10px,1.8svh,20px)}
+.intro p{font-size:clamp(13px,1.1vw,16px)}
+@media(max-width:800px){main,main.has-wish{--wish-space:130px}.intro{padding-top:80px}#wishText{font-size:25px;padding:13px 24px}}
+
+.wish{bottom:calc(clamp(14px,2svh,24px) + 40px)}
