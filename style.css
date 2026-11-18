@@ -37,3 +37,17 @@ main,main.has-wish{--wish-space:clamp(112px,15svh,150px);--scene-height:calc(100
 @media(max-width:800px){main,main.has-wish{--wish-space:130px}.intro{padding-top:80px}#wishText{font-size:25px;padding:13px 24px}}
 
 .wish{bottom:calc(clamp(14px,2svh,24px) + 40px)}
+
+/* Scale the overlay from the 1920 x 1080 composition along both axes. */
+main{--ui-unit:clamp(.5px,min(.052083333vw,.092592593svh),1.25px)}
+.intro{padding-top:calc(38 * var(--ui-unit));padding-left:3vw;padding-right:3vw}
+.intro h1{font-size:calc(76 * var(--ui-unit));letter-spacing:calc(-1.8 * var(--ui-unit));margin-bottom:calc(20 * var(--ui-unit))}
+.intro p{font-size:clamp(11px,calc(16 * var(--ui-unit)),20px)}
+.sound{width:calc(48 * var(--ui-unit));height:calc(48 * var(--ui-unit));min-width:30px;min-height:30px;top:calc(30 * var(--ui-unit));right:calc(35 * var(--ui-unit));border-radius:50%}
+.sound svg{width:calc(24 * var(--ui-unit));height:calc(24 * var(--ui-unit))}
+.restart{right:calc(94 * var(--ui-unit))}
+.wish{bottom:calc(40px + 22 * var(--ui-unit));padding:0 calc(20 * var(--ui-unit))}
+#wishText{width:min(calc(720 * var(--ui-unit)),86vw);min-height:calc(82 * var(--ui-unit));padding:calc(14 * var(--ui-unit)) calc(32 * var(--ui-unit));font-size:clamp(18px,calc(32 * var(--ui-unit)),40px);line-height:1.15;box-shadow:0 calc(7 * var(--ui-unit)) calc(22 * var(--ui-unit)) #140a0866,inset 0 0 calc(18 * var(--ui-unit)) #95612b44}
+#wishText:before,#wishText:after{top:calc(-3 * var(--ui-unit));bottom:calc(-3 * var(--ui-unit));width:calc(13 * var(--ui-unit))}
+#wishText:before{left:calc(-4 * var(--ui-unit))}#wishText:after{right:calc(-4 * var(--ui-unit))}
+@media(max-width:680px){.intro{padding-top:64px}.sound{top:16px;right:16px}.restart{right:58px}#wishText{width:86vw;font-size:22px;min-height:64px;padding:10px 22px}.wish{bottom:30px}}
